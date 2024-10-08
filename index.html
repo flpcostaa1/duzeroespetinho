@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos</title>
+    <link rel="stylesheet" href="main.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <!--google fonts//-->
+
+    <!--bootstrap-icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--bootstrap-icons//-->
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="logo">
+        <h1>Sistema de Pedidos</h1>
+
+        <div class="pedido-form">
+            <label for="cliente">Nome do Cliente:</label>
+            <input type="text" id="cliente" placeholder="Digite o nome do cliente">
+        </div>
+
+        <h2>Cardápio</h2>
+        <ul id="cardapio">
+            <li>
+                <div class="item-container">
+                    <label>Espeto de Carne - R$10,00</label>
+                    <button onclick="adicionarItem(1)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Coração - R$10,00</label>
+                    <button onclick="adicionarItem(2)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Misto - R$10,00</label>
+                    <button onclick="adicionarItem(3)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Linguiça - R$10,00</label>
+                    <button onclick="adicionarItem(4)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Queijo - R$10,00</label>
+                    <button onclick="adicionarItem(5)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Pão de Alho - R$10,00</label>
+                    <button onclick="adicionarItem(6)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Frango - R$10,00</label>
+                    <button onclick="adicionarItem(7)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Medalhão - R$10,00</label>
+                    <button onclick="adicionarItem(8)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Carne - R$25,00</label>
+                    <button onclick="adicionarItem(9)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Coração - R$25,00</label>
+                    <button onclick="adicionarItem(10)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha Mista - R$25,00</label>
+                    <button onclick="adicionarItem(11)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Linguiça - R$25,00</label>
+                    <button onclick="adicionarItem(12)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Queijo - R$25,00</label>
+                    <button onclick="adicionarItem(13)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Pão de Alho - R$25,00</label>
+                    <button onclick="adicionarItem(14)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Frango - R$25,00</label>
+                    <button onclick="adicionarItem(15)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Jantinha de Medalhão - R$25,00</label>
+                    <button onclick="adicionarItem(16)">Adicionar</button>
+                </div>
+            </li>
+            <li>
+                <div class="item-container">
+                    <label>Refrigerante mini - R$3,00</label>
+                    <button onclick="adicionarItem(17)">Adicionar</button>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Pedido</h2>
+        <ul id="pedido-lista"></ul>
+
+        <h3>Total: R$ <span id="total">0.00</span></h3>
+        <button onclick="finalizarPedido()">Finalizar Pedido</button>
+
+        <h2>Pedidos Realizados</h2>
+        <ul id="pedidos-realizados"></ul>
+
+        <!-- Aqui está a div de detalhes que ficará fora da lista -->
+        <div id="pedido-detalhes"
+            style="display: none; margin-top: 20px; background-color: #f1f1f1; padding: 15px; border-radius: 5px;">
+            <!-- Detalhes dos pedidos aparecerão aqui -->
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
